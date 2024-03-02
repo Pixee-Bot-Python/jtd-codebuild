@@ -14,7 +14,8 @@ def test_example_project_1():
     # Run the command
     subprocess.check_call(
         "jtd-codebuild fixtures/example_project_1",
-        shell=False, cwd=cwd,
+        shell=True,
+        cwd=cwd,
     )
 
     # Check the output
