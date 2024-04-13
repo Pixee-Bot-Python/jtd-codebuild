@@ -8,7 +8,7 @@ from .codebuild import jtd_codebuild
 def cli(path):
     """JTD CodeBuild"""
     # Get the path of the target directory
-    target_path = os.path.join(os.getcwd(), path)
+    target_path = path if os.path.isabs(path) else os.path.join(os.getcwd(), path)
 
     # Run the JTD CodeBuild
     jtd_codebuild(target_path)
